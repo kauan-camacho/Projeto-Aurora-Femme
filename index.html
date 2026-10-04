@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FDF8F3">
+<meta name="format-detection" content="telephone=no">
+<title>Aurora Femme | Elegância Vibrante</title>
+<meta name="description" content="Aurora Femme — moda feminina com design vibrante e elegância atemporal. Vestidos, conjuntos, blusas, saias e acessórios. Peças com Curadoria, frete grátis acima de R$ 299 e compra 100% pelo WhatsApp.">
+<meta name="author" content="Aurora Femme">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aurora Femme | Elegância Vibrante">
+<meta property="og:description" content="Moda feminina com design vibrante. Peças com curadoria, troca fácil e compra finalizada pelo WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF5C8A'/%3E%3Cstop offset='.5' stop-color='%23F2406B'/%3E%3Cstop offset='1' stop-color='%23D21F50'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' font-weight='bold' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<!-- Tailwind (utilitários) -->
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+  if (window.tailwind) {
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            branco: '#FFFFFF',
+            bege: '#FDF8F3',
+            bege2: '#F9EFE4',
+            begeEscuro: '#E6D2C2',
+            rosa: '#F2406B',
+            rosaVivo: '#FF5C8A',
+            rosaEscuro: '#D21F50',
+            rosaClaro: '#FDEEF2',
+            blush: '#FBDDE7',
+            grafite: '#2B2124',
+            wgreen: '#25D366'
+          },
+          fontFamily: {
+            editorial: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            'glow-rosa': '0 14px 34px -10px rgba(242,64,107,.5)',
+            'soft-bege': '0 20px 50px -24px rgba(93,45,62,.3)',
+            floating: '0 32px 64px -26px rgba(93,45,62,.4)'
+          }
+        }
+      }
+    };
+  }
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</head>
+
+<body class="af-body">
+
+<a href="#af-main" class="af-sr af-sr-only-focusable">Pular para o conteúdo</a>
+
+<!-- ==================================================================
+     TOASTS (notificações flutuantes)
+     ================================================================== -->
+<div id="af-toasts" class="af-toasts" aria-live="polite" aria-atomic="false"></div>
+
+<!-- ==================================================================
+     TOPO: barra de avisos + HEADER (menu de 3 partes)
+     ================================================================== -->
+<div class="af-head-wrap">
+
+  <div class="af-topbar">
+    <div class="af-container af-topbar__track">
+      <span class="af-topbar__item"><i class="ph ph-truck"></i> Frete grátis acima de R$ 299</span>
+      <span class="af-topbar__item"><i class="ph ph-arrows-left-right"></i> Primeira troca grátis em 30 dias</span>
+      <span class="af-topbar__item"><i class="ph ph-credit-card"></i> Até 3x sem juros</span>
+      <a class="af-topbar__item af-topbar__item--wa" id="af-wa-cta" href="#" target="_blank" rel="noopener">
+        <i class="ph ph-whatsapp-logo"></i> Fale com a gente
+      </a>
+    </div>
+  </div>
+
+  <header class="af-header">
+    <div class="af-container af-header__inner">
+
+      <!-- Botão de menu (mobile) -->
+      <button class="af-icon-btn af-header__burger" data-ui="menu" aria-label="Abrir menu" aria-haspopup="dialog">
+        <i class="ph ph-list"></i>
+      </button>
+
+      <!-- Logo -->
+      <a href="#/home" class="af-logo" data-act="nav" data-view="home" aria-label="Aurora Femme — página inicial">
+        <span class="af-logo__mark">AURORA</span>
+        <span class="af-logo__sub">FEMME</span>
+      </a>
+
+      <!-- Navegação: exatamente 3 partes -->
+      <nav class="af-nav" aria-label="Navegação principal">
+        <a class="af-nav__link" href="#/home" data-act="nav" data-view="home" data-nav="home">Home</a>
+        <a class="af-nav__link" href="#/catalogo" data-act="nav" data-view="catalogo" data-nav="catalogo">Catálogo</a>
+        <a class="af-nav__link" href="#/colecoes" data-act="nav" data-view="colecoes" data-nav="colecoes">Coleções</a>
+      </nav>
+
+      <!-- Ações: busca, favoritos, sacola -->
+      <div class="af-header__actions">
+        <button class="af-icon-btn" data-ui="search" aria-label="Buscar produtos" title="Buscar (tecla /)">
+          <i class="ph ph-magnifying-glass"></i>
+        </button>
+        <button class="af-icon-btn" data-ui="fav" aria-label="Meus favoritos" title="Favoritos">
+          <i class="ph ph-heart"></i>
+          <span class="af-count" data-badge="fav" aria-hidden="true">0</span>
+        </button>
+        <button class="af-icon-btn" data-ui="cart" aria-label="Minha sacola" title="Sacola">
+          <i class="ph ph-handbag"></i>
+          <span class="af-count" data-badge="cart" aria-hidden="true">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+</div>
+
+<!-- Overlay comum dos painéis -->
+<div id="af-overlay" class="af-overlay" aria-hidden="true"></div>
+
+<!-- ==================================================================
+     MENU MOBILE (3 partes + atalhos)
+     ================================================================== -->
+<div id="drawer-menu" class="af-drawer af-drawer--left" role="dialog" aria-modal="true" aria-label="Menu principal" aria-hidden="true">
+  <div class="af-drawer__head">
+    <span class="af-drawer__title"><i class="ph ph-compass"></i> Navegar</span>
+    <button class="af-icon-btn af-icon-btn--sm" data-ui-close="menu" aria-label="Fechar menu"><i class="ph ph-x"></i></button>
+  </div>
+
+  <div class="af-drawer__body">
+    <nav class="af-menu__links" aria-label="Menu">
+      <a class="af-menu__link" href="#/home" data-act="nav" data-view="home" data-nav="home">
+        <i class="ph ph-house"></i> Home
+      </a>
+      <a class="af-menu__link" href="#/catalogo" data-act="nav" data-view="catalogo" data-nav="catalogo">
+        <i class="ph ph-grid-four"></i> Catálogo
+      </a>
+      <a class="af-menu__link" href="#/colecoes" data-act="nav" data-view="colecoes" data-nav="colecoes">
+        <i class="ph ph-sparkle"></i> Coleções
+      </a>
+    </nav>
+
+    <div style="margin-top:26px">
+      <h4 class="af-opt__label" style="margin-bottom:12px">Atalhos</h4>
+      <div class="af-menu__mini">
+        <button class="af-menu__mini-item" data-ui="search"><i class="ph ph-magnifying-glass"></i> Buscar</button>
+        <button class="af-menu__mini-item" data-ui="fav">
+          <i class="ph ph-heart"></i> Favoritos
+          <span class="af-count" data-badge="fav" style="position:static;transform:none" aria-hidden="true">0</span>
+        </button>
+        <button class="af-menu__mini-item" data-ui="cart">
+          <i class="ph ph-handbag"></i> Sacola
+          <span class="af-count" data-badge="cart" style="position:static;transform:none" aria-hidden="true">0</span>
+        </button>
+        <button class="af-menu__mini-item" data-act="guia"><i class="ph ph-ruler"></i> Medidas</button>
+        <button class="af-menu__mini-item af-menu__mini-item--wa" data-act="wa-atendimento">
+          <i class="ph ph-whatsapp-logo"></i> Atendimento
+        </button>
+        <button class="af-menu__mini-item af-menu__mini-item--wa" data-act="wa-checkout">
+          <i class="ph ph-shopping-cart"></i> Finalizar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="af-drawer__foot">
+    <button class="af-btn af-btn--wa af-btn--block" data-act="wa-atendimento">
+      <i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp
+    </button>
+    <p class="af-foot-note"><i class="ph ph-clock"></i> <span id="af-wa-number">—</span></p>
+  </div>
+</div>
+
+<!-- ==================================================================
+     SACOLA DE COMPRAS
+     ================================================================== -->
+<div id="drawer-cart" class="af-drawer af-drawer--right" role="dialog" aria-modal="true" aria-label="Sua sacola" aria-hidden="true">
+  <div class="af-drawer__head">
+    <span class="af-drawer__title"><i class="ph ph-handbag"></i> Sua sacola</span>
+    <button class="af-icon-btn af-icon-btn--sm" data-ui-close="cart" aria-label="Fechar sacola"><i class="ph ph-x"></i></button>
+  </div>
+
+  <div class="af-drawer__body af-sb" id="af-cart-items"></div>
+
+  <div class="af-drawer__foot">
+    <!-- barra de frete grátis -->
+    <div class="af-ship-bar" id="af-ship-bar">
+      <p class="af-ship-bar__txt"></p>
+      <div class="af-ship-bar__track"><div class="af-ship-bar__fill" style="width:0%"></div></div>
+    </div>
+
+    <!-- cupom -->
+    <form class="af-coupon" data-act="none" onsubmit="return false">
+      <input type="text" data-coupon-input placeholder="Cupom de desconto" aria-label="Cupom de desconto" autocomplete="off" spellcheck="false">
+      <button type="button" class="af-btn af-btn--ghost af-btn--sm" data-act="coupon-apply">Aplicar</button>
+    </form>
+    <p class="af-coupon__msg" id="af-coupon-msg"></p>
+
+    <!-- totais -->
+    <div class="af-totals" id="af-cart-totals"></div>
+
+    <!-- ações -->
+    <button class="af-btn af-btn--wa af-btn--block" data-act="wa-checkout" data-cart-checkout>
+      <i class="ph ph-whatsapp-logo"></i> Finalizar pelo WhatsApp
+    </button>
+    <button class="af-btn af-btn--ghost af-btn--block" style="margin-top:9px" data-ui-close="cart">
+      Continuar comprando
+    </button>
+    <p class="af-foot-note"><i class="ph ph-lock-simple"></i> Você finaliza a compra com a nossa equipe, sem burocracia</p>
+  </div>
+</div>
+
+<!-- ==================================================================
+     FAVORITOS
+     ================================================================== -->
+<div id="drawer-fav" class="af-drawer af-drawer--right" role="dialog" aria-modal="true" aria-label="Meus favoritos" aria-hidden="true">
+  <div class="af-drawer__head">
+    <span class="af-drawer__title"><i class="ph ph-heart"></i> Favoritos</span>
+    <button class="af-icon-btn af-icon-btn--sm" data-ui-close="fav" aria-label="Fechar favoritos"><i class="ph ph-x"></i></button>
+  </div>
+
+  <div class="af-drawer__body af-sb" id="af-fav-items"></div>
+
+  <div class="af-drawer__foot">
+    <button class="af-btn af-btn--wa af-btn--block" data-act="wa-fav" data-fav-wa>
+      <i class="ph ph-whatsapp-logo"></i> Enviar lista no WhatsApp
+    </button>
+    <button class="af-btn af-btn--ghost af-btn--block" style="margin-top:9px" data-act="fav-clear-all" data-fav-clear>
+      Limpar lista
+    </button>
+  </div>
+</div>
+
+<!-- ==================================================================
+     FILTROS (painel inferior no mobile)
+     ================================================================== -->
+<div id="drawer-filters" class="af-drawer af-drawer--bottom" role="dialog" aria-modal="true" aria-label="Filtros" aria-hidden="true">
+  <div class="af-sheet-handle"></div>
+  <div class="af-drawer__head" style="border-bottom:0;padding-top:6px">
+    <span class="af-drawer__title" style="font-size:18px"><i class="ph ph-faders"></i> Filtrar</span>
+    <button class="af-icon-btn af-icon-btn--sm" data-ui-close="filters" aria-label="Fechar filtros"><i class="ph ph-x"></i></button>
+  </div>
+  <div class="af-drawer__body af-sb" data-filters-host></div>
+  <div class="af-drawer__foot" style="display:flex;gap:9px">
+    <button class="af-btn af-btn--ghost" style="flex:1" data-act="clear-filters">Limpar</button>
+    <button class="af-btn af-btn--primary" style="flex:2" data-ui-close="filters">
+      Ver resultados (<span data-catalog-count>0</span>)
+    </button>
+  </div>
+</div>
+
+<!-- ==================================================================
+     BUSCA
+     ================================================================== -->
+<div id="search-panel-host" class="af-search" role="dialog" aria-modal="true" aria-label="Buscar produtos" aria-hidden="true">
+  <div class="af-search__backdrop"></div>
+  <div class="af-search__panel" id="search-panel">
+    <div class="af-search__head">
+      <div class="af-search__field">
+        <i class="ph ph-magnifying-glass"></i>
+        <input type="search" id="af-search-input" class="af-search__input" data-autofocus
+               placeholder="Buscar por nome, cor, categoria…"
+               aria-label="Termo de busca" autocomplete="off" spellcheck="false">
+        <button class="af-search__clear" data-act="search-clear" aria-label="Limpar busca"><i class="ph ph-x"></i></button>
+      </div>
+      <button class="af-icon-btn af-icon-btn--sm" data-ui-close="search" aria-label="Fechar busca">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <div class="af-search__body af-sb" id="af-search-body"></div>
+  </div>
+</div>
+
+<!-- ==================================================================
+     CONTEÚDO
+     ================================================================== -->
+<main class="af-main" id="af-main">
+
+  <!-- ======================= HOME ======================= -->
+  <section id="view-home" class="af-view is-active" aria-label="Página inicial">
+
+    <!-- HERO -->
+    <div class="af-container">
+      <div class="af-hero">
+        <div class="af-hero__media">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop"
+               alt="Mulher usando um vestido Aurora Femme" fetchpriority="high" decoding="async">
+        </div>
+        <div class="af-hero__veil"></div>
+
+        <div class="af-hero__inner">
+          <span class="af-pill"><i class="ph ph-sparkle"></i> Nova coleção disponível</span>
+          <div class="af-hero__content" style="margin-top:18px">
+            <h1 class="af-hero__title">
+              Elegância que<br>
+              <em class="af-grad" style="font-style:italic;font-weight:400">fascina.</em>
+            </h1>
+            <p class="af-hero__lead">
+              Peças criadas para destacar a sua feminilidade com um toque vibrante de sofisticação moderna.
+              Curadoria feita para durar muito mais que uma estação.
+            </p>
+            <div class="af-hero__cta">
+              <button class="af-btn af-btn--primary af-btn--lg" data-act="nav" data-view="catalogo">
+                <i class="ph ph-sparkle"></i> Explorar catálogo
+              </button>
+              <button class="af-btn af-btn--ghost af-btn--lg" data-act="nav" data-view="colecoes">
+                Ver coleções
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- selos -->
+      <div class="af-perks">
+        <div class="af-perk">
+          <span class="af-perk__ico"><i class="ph ph-truck"></i></span>
+          <span class="af-perk__txt"><b>Frete grátis</b><span>Acima de R$ 299</span></span>
+        </div>
+        <div class="af-perk">
+          <span class="af-perk__ico"><i class="ph ph-arrows-left-right"></i></span>
+          <span class="af-perk__txt"><b>Troca fácil</b><span>Primeira troca grátis</span></span>
+        </div>
+        <div class="af-perk">
+          <span class="af-perk__ico"><i class="ph ph-whatsapp-logo"></i></span>
+          <span class="af-perk__txt"><b>Compra no Zap</b><span>Atendimento humano</span></span>
+        </div>
+        <div class="af-perk">
+          <span class="af-perk__ico"><i class="ph ph-shield-check"></i></span>
+          <span class="af-perk__txt"><b>Compra segura</b><span>Pix ou em até 3x</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESTAQUES -->
+    <div class="af-container af-section">
+      <div class="af-sect-head af-reveal">
+        <div>
+          <span class="af-eyebrow" style="margin-bottom:6px">Seleção da semana</span>
+          <h2 class="af-title">Destaques</h2>
+        </div>
+        <button class="af-sect-head__link" data-act="see-all">Ver catálogo <i class="ph ph-arrow-right"></i></button>
+      </div>
+      <div class="af-grid" id="af-home-grid"></div>
+      <div style="text-align:center;margin-top:26px" class="af-reveal">
+        <button class="af-btn af-btn--ghost" data-act="see-all">Ver todas as peças <i class="ph ph-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- CATEGORIAS -->
+    <div class="af-container af-section" style="position:relative;padding-top:0">
+      <span class="af-decor" style="width:300px;height:300px;background:var(--rosaClaro);top:-40px;right:-80px;opacity:.7"></span>
+      <div class="af-sect-head af-reveal">
+        <div>
+          <span class="af-eyebrow" style="margin-bottom:6px">Descubra</span>
+          <h2 class="af-title">Encontre o seu estilo</h2>
+        </div>
+      </div>
+      <div class="af-rail" id="af-home-cats"></div>
+    </div>
+
+    <!-- COLEÇÕES -->
+    <div class="af-container af-section" style="padding-top:0">
+      <div class="af-sect-head af-reveal">
+        <div>
+          <span class="af-eyebrow" style="margin-bottom:6px">Universos Aurora</span>
+          <h2 class="af-title">Coleções</h2>
+        </div>
+        <button class="af-sect-head__link" data-act="see-cols">Ver todas <i class="ph ph-arrow-right"></i></button>
+      </div>
+      <div class="af-col-grid" id="af-home-cols"></div>
+    </div>
+
+    <!-- WHATSAPP BANNER -->
+    <div class="af-container af-section" style="padding-top:0">
+      <div class="af-reveal" style="display:grid;gap:26px;align-items:center;padding:clamp(24px,4vw,44px);border-radius:28px;background:linear-gradient(120deg,#fff,var(--rosaClaro));border:1px solid var(--rosaClaro)">
+        <div>
+          <span class="af-eyebrow" style="margin-bottom:10px">Atendimento humano</span>
+          <h2 class="af-title-sm" style="margin-bottom:12px">Na dúvida do tamanho ou da cor? Fala com a gente.</h2>
+          <p style="font-size:14px;line-height:1.7;color:var(--tinta-2);max-width:48ch">
+            Nossa equipe responde em minutos, manda fotos reais da peça, confere o estoque e monta
+            o pedido pra você. Sem robô, sem formulário, sem enrolação.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+            <button class="af-btn af-btn--wa" data-act="wa-atendimento"><i class="ph ph-whatsapp-logo"></i> Chamar no WhatsApp</button>
+            <button class="af-btn af-btn--ghost" data-act="guia"><i class="ph ph-ruler"></i> Guia de medidas</button>
+          </div>
+        </div>
+        <div style="display:grid;gap:10px">
+          <div class="af-trust__item" style="background:#fff"><i class="ph ph-clock"></i> Resposta em poucos minutos</div>
+          <div class="af-trust__item" style="background:#fff"><i class="ph ph-camera"></i> Fotos reais de cada peça</div>
+          <div class="af-trust__item" style="background:#fff"><i class="ph ph-ruler"></i> Ajuda de tamanho personalizada</div>
+          <div class="af-trust__item" style="background:#fff"><i class="ph ph-package"></i> Estoque conferido na hora</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CATÁLOGO ======================= -->
+  <section id="view-catalogo" class="af-view" aria-label="Catálogo de produtos">
+
+    <div class="af-container">
+      <div class="af-breadcrumb" id="af-crumbs" style="margin-bottom:18px"></div>
+
+      <div style="margin-bottom:26px">
+        <h1 class="af-title" id="af-cat-title">Todos os produtos</h1>
+        <p class="af-muted" id="af-cat-sub" style="margin-top:8px;max-width:60ch;font-size:14px"></p>
+      </div>
+
+      <div class="af-catalog">
+        <!-- Filtros desktop -->
+        <aside class="af-filters" aria-label="Filtros">
+          <div class="af-fcard" data-filters-host></div>
+        </aside>
+
+        <!-- Resultados -->
+        <div>
+          <!-- barra de ferramentas -->
+          <div class="af-toolbar">
+            <button class="af-btn af-btn--ghost af-btn--sm af-filter-btn" data-ui="filters">
+              <i class="ph ph-faders"></i> Filtros
+              <span class="af-count" data-filter-count style="position:static;transform:none;background:var(--rosa-escuro)">0</span>
+            </button>
+
+            <span class="af-toolbar__count" data-catalog-count>0</span>
+            <span class="af-toolbar__spacer"></span>
+
+            <label class="af-toolbar__sort" for="af-sort">
+              <span>Ordenar</span>
+              <select class="af-select" id="af-sort" data-sort aria-label="Ordenar produtos">
+                <option value="recomendados">Recomendados</option>
+                <option value="novos">Lançamentos</option>
+                <option value="menor">Menor preço</option>
+                <option value="maior">Maior preço</option>
+                <option value="avaliados">Melhor avaliados</option>
+              </select>
+            </label>
+          </div>
+
+          <!-- chips de filtros ativos -->
+          <div class="af-active-filters" id="af-active-filters" style="display:none"></div>
+
+          <!-- grid -->
+          <div class="af-grid af-grid--cat" id="af-catalog-grid"></div>
+
+          <!-- carregar mais -->
+          <div class="af-loadmore" id="af-catalog-more" style="display:none">
+            <button class="af-btn af-btn--ghost af-btn--lg" data-act="more">
+              <i class="ph ph-plus"></i> <span data-more-label>Carregar mais</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= COLEÇÕES ======================= -->
+  <section id="view-colecoes" class="af-view" aria-label="Coleções">
+
+    <div class="af-container">
+      <div class="af-breadcrumb" id="af-crumbs-col" style="margin-bottom:18px">
+        <button data-act="nav" data-view="home">Home</button>
+        <span class="af-bc-sep">/</span>
+        <span class="is-current">Coleções</span>
+      </div>
+
+      <div class="af-col-hero af-reveal">
+        <img class="af-col-hero__img" src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1800&auto=format&fit=crop" alt="" loading="lazy">
+        <span class="af-col-hero__veil"></span>
+        <div class="af-col-hero__body">
+          <span class="af-eyebrow">Astratégia deCloset</span>
+          <h2 style="margin-top:8px">Quatro universos,<br>um só guarda-roupa</h2>
+          <p>
+            Cada coleção Aurora foi construída em torno de uma mulher real e de momentos reais.
+            Peças que conversam entre si, para você montar looks sem pensar duas vezes.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:22px">
+            <button class="af-btn af-btn--primary" data-act="see-all"><i class="ph ph-grid-four"></i> Ver o catálogo completo</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="af-col-grid af-section" id="af-collections-grid" style="padding-top:0"></div>
+
+      <div style="text-align:center;padding-bottom:20px">
+        <button class="af-btn af-btn--ghost af-btn--lg" data-act="see-all">
+          Ver todas as peças <i class="ph ph-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================================================================
+     FOOTER
+     ================================================================== -->
+<footer class="af-foot">
+  <div class="af-foot__line"></div>
+  <div class="af-container">
+    <div class="af-foot__grid">
+
+      <div>
+        <div class="af-logo" style="align-items:flex-start">
+          <span class="af-logo__mark">AURORA</span>
+          <span class="af-logo__sub">FEMME</span>
+        </div>
+        <p style="margin-top:14px;max-width:34ch">
+          Design vibrante, elegância em cada detalhe e uma experiência de compra criada para
+          mulheres extraordinárias.
+        </p>
+        <div class="af-social">
+          <a href="https://instagram.com/aurorafemme" data-cfg-href="instagram" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+          <a href="#" data-act="wa-atendimento" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+          <a href="#" data-act="wa-atendimento" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" data-act="wa-atendimento" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Navegar</h4>
+        <div class="af-foot__links">
+          <a href="#/home" data-act="nav" data-view="home">Home</a>
+          <a href="#/catalogo" data-act="nav" data-view="catalogo">Catálogo</a>
+          <a href="#/colecoes" data-act="nav" data-view="colecoes">Coleções</a>
+          <button data-act="see-all">Ofertas</button>
+          <button data-act="guia">Guia de medidas</button>
+        </div>
+      </div>
+
+      <div>
+        <h4>Ajuda</h4>
+        <div class="af-foot__links">
+          <button data-act="wa-atendimento" data-assunto="Trocas e devoluções">Trocas e devoluções</button>
+          <button data-act="wa-atendimento" data-assunto="Prazo de entrega">Prazos de entrega</button>
+          <button data-act="wa-atendimento" data-assunto="Formas de pagamento">Formas de pagamento</button>
+          <button data-act="wa-atendimento" data-assunto="Rastrear pedido">Rastrear pedido</button>
+          <button data-act="wa-atendimento" data-assunto="Tamanho e medidas">Tamanho e medidas</button>
+        </div>
+      </div>
+
+      <div>
+        <h4>Atendimento</h4>
+        <div class="af-foot__contact">
+          <a href="#" data-act="wa-atendimento"><i class="ph ph-whatsapp-logo"></i><span><b>WhatsApp</b><span data-cfg="whatsapp">—</span></span></a>
+          <a href="mailto:contato@aurorafemme.com.br" data-cfg-href="email"><i class="ph ph-envelope-simple"></i><span><b>E-mail</b><span data-cfg="email">contato@aurorafemme.com.br</span></span></a>
+          <a href="#" data-act="wa-atendimento"><i class="ph ph-map-pin"></i><span><b>Showroom</b><span data-cfg="endereco">Rua das Flores, 123 — Cambuí, Campinas/SP</span></span></a>
+          <a href="#" data-act="wa-atendimento"><i class="ph ph-clock"></i><span><b>Horários</b><span data-cfg="horario">Seg a Sex 9h às 18h · Sáb 9h às 13h</span></span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="af-foot__bar">
+      <span>© <span id="af-year">2026</span> <span data-cfg="storeName">Aurora Femme</span> · Todos os direitos reservados</span>
+      <span class="af-foot__pay">
+        <span>Pix</span><span>Visa</span><span>Master</span><span>Elo</span><span>Amex</span><span>Boleto</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================================================================
+     WHATSAPP FLUTUANTE
+     ================================================================== -->
+<div class="af-wa">
+  <div class="af-wa__panel" id="af-wa-panel" role="dialog" aria-label="Atendimento por WhatsApp" aria-hidden="true">
+
+    <div class="af-wa__head">
+      <span class="af-wa__ava"><i class="ph ph-whatsapp-logo"></i></span>
+      <span>
+        <b>Atendimento Aurora</b>
+        <span><i class="af-wa__dot"></i> Online agora</span>
+      </span>
+      <button class="af-wa__x" data-act="wa-close" aria-label="Fechar"><i class="ph ph-x"></i></button>
+    </div>
+
+    <p class="af-wa__p">
+      Olá! 👋 O que você quer fazer? Todos os atalhos já abrem o WhatsApp com a mensagem pronta.
+    </p>
+
+    <div class="af-wa__opts">
+      <button class="af-wa__opt af-wa__opt--cart" id="af-wa-checkout" data-act="wa-checkout" disabled>
+        <i class="ph ph-shopping-cart-simple"></i>
+        <span>Finalizar meu pedido<small id="af-wa-cart-info">Sua sacola está vazia</small></span>
+      </button>
+      <button class="af-wa__opt" id="af-wa-fav" data-act="wa-fav" disabled>
+        <i class="ph ph-heart"></i>
+        <span>Enviar meus favoritos<small>Nenhuma peça salva</small></span>
+      </button>
+      <button class="af-wa__opt" data-act="wa-atendimento">
+        <i class="ph ph-chat-circle-dots"></i>
+        <span>Falar com uma consultora<small>Tiragem de dúvidas, medidas e estoque</small></span>
+      </button>
+      <button class="af-wa__opt" data-act="guia">
+        <i class="ph ph-ruler"></i>
+        <span>Enviar minhas medidas<small>Para receber uma indicação de tamanho</small></span>
+      </button>
+    </div>
+  </div>
+
+  <span class="af-wa__btn-wrap">
+    <button class="af-wa__btn" id="af-wa-btn" data-ui="wa" aria-label="Falar no WhatsApp" aria-expanded="false">
+      <i class="ph ph-whatsapp-logo"></i>
+    </button>
+  </span>
+</div>
+
+<!-- ==================================================================
+     MODAL: PRODUTO
+     ================================================================== -->
+<div id="modal-product" class="af-modal" role="dialog" aria-modal="true" aria-label="Detalhes do produto" aria-hidden="true">
+  <div class="af-modal__backdrop" data-ui-close="product"></div>
+  <div class="af-modal__panel">
+    <button class="af-modal__close" data-act="close-product" aria-label="Fechar">
+      <i class="ph ph-x"></i>
+    </button>
+    <div class="af-modal__scroll" id="af-pd"></div>
+  </div>
+</div>
+
+<!-- ==================================================================
+     MODAL: GUIA DE MEDIDAS
+     ================================================================== -->
+<div id="modal-guia" class="af-modal" role="dialog" aria-modal="true" aria-label="Guia de medidas" aria-hidden="true">
+  <div class="af-modal__backdrop" data-ui-close="guia"></div>
+  <div class="af-modal__panel" style="max-width:640px">
+    <button class="af-modal__close" data-act="guia-close" aria-label="Fechar">
+      <i class="ph ph-x"></i>
+    </button>
+    <div class="af-modal__scroll" id="guia-content"></div>
+  </div>
+</div>
+
+<!-- ==================================================================
+     SCRIPTS
+     ================================================================== -->
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+<script>
+  // ano no rodapé
+  (function () {
+    var y = document.getElementById("af-year");
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
